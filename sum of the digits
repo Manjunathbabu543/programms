@@ -2,7 +2,7 @@
 int main()
 {
     int num,sum=0,r;
-    printf("Enter a Number: ");
+    printf("Enter a integer: ");
     scanf("%d",&num);
     while(num)
     {
@@ -10,6 +10,6 @@ int main()
         num=num/10;
         sum=sum+r;
     }
-    printf("Sum of Digits of Number:  %d",sum);
+    printf("Sum of Digits of num:  %d",sum);
     return 0;
 }
