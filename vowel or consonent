@@ -2,7 +2,7 @@ int main()
 {
     char ch;
      
-    printf("Enter a character: ");
+    printf("Enter a alphabet: ");
     scanf("%c",&ch);
      
     //condition to check character is alphabet or not
