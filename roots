@@ -1,31 +1,31 @@
-#include <math.h>
-#include <stdio.h>
-int main() {
-    double a, b, c, discriminant, root1, root2, realPart, imagPart;
-    printf("Enter coefficients a, b and c: ");
-    scanf("%lf %lf %lf", &a, &b, &c);
-
-    discriminant = b * b - 4 * a * c;
-
-    // condition for real and different roots
-    if (discriminant > 0) {
-        root1 = (-b + sqrt(discriminant)) / (2 * a);
-        root2 = (-b - sqrt(discriminant)) / (2 * a);
-        printf("root1 = %.2lf and root2 = %.2lf", root1, root2);
-    }
-
-    // condition for real and equal roots
-    else if (discriminant == 0) {
-        root1 = root2 = -b / (2 * a);
-        printf("root1 = root2 = %.2lf;", root1);
-    }
-
-    // if roots are not real
-    else {
-        realPart = -b / (2 * a);
-        imagPart = sqrt(-discriminant) / (2 * a);
-        printf("root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi", realPart, imagPart, realPart, imagPart);
-    }
-
-    return 0;
-} 
+#include<stdio.h>  
+#include<math.h>  // it is used for math calculation  
+#include<conio.h>  
+void main()  
+{  
+    float x, y, z, det, root1, root2, real, img;  
+    printf("\n Enter the value of coefficient x, y and z: \n ");  
+    scanf("%f %f %f", &x, &y, &z);  
+    // define the quadratic formula of the nature of the root  
+    det = y * y - 4 * x * z;      
+    // defines the conditions for real and different roots of the quadratic equation  
+    if (det > 0)  
+    {  
+    root1 = (-y + sqrt(det)) / (2 * x);  
+    root2 = (-y + sqrt(det)) / (2 * x);  
+    printf("\n Value of root1 = %.2f and value of root2 = %.2f", root1, root2);  
+    }  
+    // elseif condition defines both roots ( real and equal root) are equal in the quadratic equation  
+    else if (det == 0)  
+    {  
+        root1 = root2 = -y / (2 * x); // both roots are equal;  
+        printf("\n Value of root1 = %.2f and Value of root2 = %.2f", root1, root2);  
+    }  
+    // if det < 0, means both roots are real and imaginary in the quadratic equation.  
+    else {  
+        real = -y / (2 * x);  
+        img = sqrt(-det) / (2 * x);  
+        printf("\n value of root1 = %.2f + %.2fi and value of root2 = %.2f - %.2fi ", real, img, real, img);  
+    }  
+    getch();  
+    }  
